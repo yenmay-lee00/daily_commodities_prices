@@ -25,7 +25,7 @@ Run `db_csv.py`
    - SQLite is not a cloud-based service. It's a library that you include in your application. The database file resides on your local filesystem or on the filesystem of the machine where your script is running.
    - When your script runs daily and indefinitely, you can use SQLite to store data in a persistent manner between runs. Each time your script runs, it can connect to the SQLite database, perform the scraping, and then store the scraped data in the database. 
 2. In case you need to clear your daily_commodities_prices database and re-initialises it, you may run this script:
-   ```
+   ```python
    def clear_database(database_file):
     # Connect to the SQLite database
     conn = sqlite3.connect(database_file)
@@ -44,6 +44,6 @@ Run `db_csv.py`
     conn.commit()
     conn.close()
 
-  database_file = 'daily_commodities_prices.db'
-  clear_database(database_file)
+   database_file = 'daily_commodities_prices.db'
+   clear_database(database_file)
    ```
