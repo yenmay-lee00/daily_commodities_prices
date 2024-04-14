@@ -1,6 +1,3 @@
-"""
-Author: yenmay
-"""
 from functions import *
 from bs4 import BeautifulSoup
 from dateutil.relativedelta import relativedelta
@@ -13,7 +10,7 @@ import numpy as np
 import os
 import xlrd
 
-main_folder_path = "C:/Users/gpleeym/Documents/Python/meds" # change to your path
+main_folder_path = "C:/Users/..." # change to the folder path you want your BURSA file to be temporarily saved
 header_general = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 Edg/123.0.0.0'}
 
 class Commodity:
