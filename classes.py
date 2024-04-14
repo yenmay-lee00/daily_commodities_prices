@@ -11,7 +11,7 @@ import os
 import xlrd
 
 main_folder_path = "C:/Users/..." # change to the folder path you want your BURSA file to be temporarily saved
-header_general = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 Edg/123.0.0.0'}
+header_general = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 Edg/123.0.0.0'} # change to your header
 
 class Commodity:
     def __init__(self):
@@ -50,7 +50,7 @@ class PalmOil(Commodity):
 
     @classmethod
     def get_dynamic_soup(cls, url):
-        driver = webdriver.Edge()
+        driver = webdriver.Edge() # change to your preferred browser driver
         driver.get(url)
         html_content = driver.page_source
         driver.quit()
