@@ -49,5 +49,13 @@ Run `db_csv.py`
    ```
 ## Metadata
 ### Commodity
+| Commodity    | URL                                                                  | URL Time Coverage       | Data Source Type | Data Extraction Rules                                                                                                 | Parent Class | Child Class | date_obj |
+|--------------|----------------------------------------------------------------------|-------------------------|------------------|------------------------------------------------------------------------------------------------------------------------|--------------|-------------|----------|
+| rubber       | https://www.lgm.gov.my/webv2api/api/rubberprice/currentprice         | 1 day                   | JSON             | SMR 20 (Sen/Kg)                                                                                                        | Commodity    | Rubber      | date_obj_1 |
+| palm_oil     | https://bepi.mpob.gov.my/admin2/chart_cpomsia_mini.php              | 1 day                   | Dynamic HTML     | (RM/TONNE)                                                                                                             | Commodity    | PalmOil     | date_obj_2 |
+| mdex_current | https://www.bursamalaysia.com/market_information/market_statistic/derivatives | 1 month                 | xls              | Tab: "TS_All Prod" tab >> Row Range: FCPO Settlement >> Row: T+0 if date is 1st - 15th; T+1 if date is 16th - EOM   | Commodity    | Mdex        | date_obj_1 |
+| mdex_future  | https://www.bursamalaysia.com/market_information/market_statistic/derivatives | 1 month                 | xls              | Tab: "TS_All Prod" tab >> Row Range: FCPO Settlement >> Row: T+2 if date is 1st - 15th; T+3 if date is 16th - EOM   | Commodity    | Mdex        | date_obj_1 |
+| cocoa        | https://sso.koko.gov.my/api/carian_HHarian?tarikh={format_date(self.date_obj, '%Y-%m-%d')}&bahasa=English&wpgetapi=[%22api_koko%22,%22carian_harian%22,%22none%22,0] | 1 day (other days accessible via mutating url) | Static HTML      | mean(array of Avg of SMC 2)                                                                                           | Commodity    | Cocoa       | date_obj_1 |
+| opec         | opec.org/basket/basketDayArchives.xml                               | 2003-01-02 until most recent | Static HTML | val of BasketList                                                                                                      | Commodity    | OPEC        | date_obj_2 |
 
 ### Data Update
