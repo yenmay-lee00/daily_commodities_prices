@@ -3,4 +3,4 @@ Automated prices data web scraping for rubber from LGM, palm oil from MPOB, crud
 
 ## Local Project Setup
 1. Create a virtual environment with Python and activate it
-2. ```pip install -r requirements.txt
+2. `pip install -r requirements.txt`
