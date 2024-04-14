@@ -13,8 +13,14 @@ Automated prices data web scraping for rubber from LGM, palm oil from MPOB, crud
    - `main.py`: main script
    - `db_csv.py`: saves prices table of the daily_commodities_prices into csv
 5. Run `pip install -r requirements.txt`
-6. Run `db_init.py` to initialise the daily_commodities_prices database
-7. Schedule `main.py` to run on your preferred time daily.
+6. Change path(s) in the relevant folder
+   - `db_init.py`
+      - `file_path`: path where your `Daily Commodities Prices.xlsx` is saved
+   - `classes.py`
+      - `main_folder_path`: path where daily BURSA files will be temporarily saved
+      - `header_general`: your browser header (see how to check [here](https://stackoverflow.com/questions/4423061/how-can-i-view-http-headers-in-google-chrome))
+8. Run `db_init.py` to initialise the daily_commodities_prices database
+9. Schedule `main.py` to run on your preferred time daily.
 
 ## View Database
 Run `db_csv.py`
