@@ -59,12 +59,12 @@ Run `db_csv.py`
 | opec         | opec.org/basket/basketDayArchives.xml                               | 2003-01-02 until most recent | Static HTML | val of BasketList                                                                                                          | Commodity    | OPEC        | date_obj_2 |
 
 ### Data Update
-|      | today() | date_obj_1 | date_obj_2 |
-|------|---------|------------|------------|
-| Mon  | None    | Fri        | None       |
-| Tue  | Mon     | Mon        | None       |
-| Wed  | Tue     | Tue        | None       |
-| Thu  | Wed     | Wed        | None       |
-| Fri  | Thu     | Thu        | None       |
-| Sat  | Fri     | None       | None       |
-| Sun  | None    | None       | None       |
+| today() | date_obj_1 | date_obj_2 |
+|------|---------|------------|
+| Mon  | None    | Fri        |
+| Tue  | Mon     | Mon        |
+| Wed  | Tue     | Tue        |
+| Thu  | Wed     | Wed        |
+| Fri  | Thu     | Thu        |
+| Sat  | Fri     | None       |
+| Sun  | None    | None       |
