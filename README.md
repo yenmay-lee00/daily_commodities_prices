@@ -1,5 +1,5 @@
 # daily_commodities_prices
-Automated prices data web scraping for rubber from LGM, palm oil from MPOB, crude palm oil futures (FCPO) for current and future from BURSA, cocoa from LKM and Organisation of the Petroleum Exporting Countries (OPEC) Basket Price for each trading day. Script is designed to scrape live data, not historical data.
+Automated prices data web scraping for rubber from LGM, palm oil from MPOB, crude palm oil futures (FCPO) for current and future from BURSA, cocoa from LKM and Organisation of the Petroleum Exporting Countries (OPEC) Basket Price for each trading day. Script builds time series data based on live data, not historical data.
 
 ## Local Project Setup
 ### Initialisation
