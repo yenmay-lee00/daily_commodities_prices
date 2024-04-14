@@ -58,5 +58,13 @@ Run `db_csv.py`
 | cocoa        | https://sso.koko.gov.my/api/carian_HHarian?tarikh={format_date(self.date_obj, '%Y-%m-%d')}&bahasa=English&wpgetapi=[%22api_koko%22,%22carian_harian%22,%22none%22,0] | 1 day (other days accessible via mutating url) | Static HTML      | mean(array of Avg of SMC 2)                                                                                             | Commodity    | Cocoa       | date_obj_1 |
 | opec         | opec.org/basket/basketDayArchives.xml                               | 2003-01-02 until most recent | Static HTML | val of BasketList                                                                                                          | Commodity    | OPEC        | date_obj_2 |
 
-
 ### Data Update
+|      | today() | date_obj_1 | date_obj_2 |
+|------|---------|------------|------------|
+| Mon  | None    | Fri        | None       |
+| Tue  | Mon     | Mon        | None       |
+| Wed  | Tue     | Tue        | None       |
+| Thu  | Wed     | Wed        | None       |
+| Fri  | Thu     | Thu        | None       |
+| Sat  | Fri     | None       | None       |
+| Sun  | None    | None       | None       |
