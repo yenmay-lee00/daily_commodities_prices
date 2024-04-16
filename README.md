@@ -13,10 +13,9 @@ Automated prices data web scraping for rubber from LGM, palm oil from MPOB, crud
    - `main.py`: main script
    - `db_csv.py`: saves prices table of the daily_commodities_prices into csv
 5. Run `pip install -r requirements.txt`
-6. Download web driver based on your preferred browser (palm_oil website is built on dynamic HTML, hence selenium was used)
+6. Download web driver based on your preferred browser (palm_oil website is built on dynamic HTML, hence selenium was used). This script uses webdriver.Edge() by default. Please edit code line 56 of `classes.py` if you are using other browsers, e.g. webdriver.Chrome().
    - [Microsoft Edge WebDriver](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/?form=MA13LH#downloads)
    - [ChromeDriver](https://developer.chrome.com/docs/chromedriver/downloads)
-   Note: This script uses webdriver.Edge() by default. Please edit code line 56 of `classes.py` if you are using other browsers, e.g. webdriver.Chrome().\
 7. Change variables' values in the relevant folder
    - `db_init.py`
       - `file_path`: path where your `Daily Commodities Prices.xlsx` is saved
