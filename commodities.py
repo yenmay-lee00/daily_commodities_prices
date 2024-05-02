@@ -13,13 +13,13 @@ import numpy as np
 import os
 import xlrd
 
-main_folder_path = "C:/Users/yenma/OneDrive/Documents/Python Projects/meds" # change to your path
+main_folder_path = "change/to/your/path" # change to your path
 
 class Commodity:
     def __init__(self):
         pass
         
-    def get_soup(self, url, header_general={'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36 Edg/124.0.0.0'}):
+    def get_soup(self, url, header_general={'User-Agent': 'insert your header'}): # insert your header
         response = requests.get(url, headers=header_general, verify=False)
         soup = BeautifulSoup(response.text, 'html.parser')
         return soup
