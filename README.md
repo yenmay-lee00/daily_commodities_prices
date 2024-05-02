@@ -8,10 +8,10 @@ Automated prices data web scraping for rubber from LGM, palm oil from MPOB, crud
    - `requirements.txt`: contains all dependent packages for this project
    - `Daily Commodities Prices.xlsx`: daily historical time series data of 6 commodities to be used to initialise the daily_commodities_prices database provided from 01/03/24 until 01/04/24 (append to dataset manually if you wish the extend the historical data included in your database)
    - `db_init.py`: initialises the daily_commodities_prices database
-   - `functions.py`: contains functions to run main.py
-   - `classes.py`: contains commodity classes to run main.py
+   - `helpers.py`: contains helper functions to run main.py
+   - `commodities.py`: contains commodity classes to run main.py
    - `main.py`: main script
-   - `db_csv.py`: saves prices table of the daily_commodities_prices into csv
+   - `db_csv_parquet.py`: saves prices table of the daily_commodities_prices into csv
 5. Run `pip install -r requirements.txt`
 6. Download web driver based on your preferred browser (palm_oil website is built on dynamic HTML, hence selenium was used). This script uses webdriver.Edge() by default. Please edit code line 56 of `classes.py` if you are using other browsers, e.g. webdriver.Chrome().
    - [Microsoft Edge WebDriver](https://developer.microsoft.com/en-us/microsoft-edge/tools/webdriver/?form=MA13LH#downloads)
@@ -19,14 +19,14 @@ Automated prices data web scraping for rubber from LGM, palm oil from MPOB, crud
 7. Change variables' values in the relevant folder
    - `db_init.py`
       - `file_path`: path where your `Daily Commodities Prices.xlsx` is saved
-   - `classes.py`
+   - `commodities.py`
       - `main_folder_path`: path where daily BURSA files will be temporarily saved
       - `header_general`: your browser header (see how to check [here](https://stackoverflow.com/questions/4423061/how-can-i-view-http-headers-in-google-chrome))
 8. Run `db_init.py` to initialise the daily_commodities_prices database
 9. Schedule `main.py` to run on your preferred time daily.
 
 ## View Database
-Run `db_csv.py`
+Run `db_csv_parquet.py`
 
 ## Note
 1. This script hosts prices dataset on SQLite
