@@ -1,7 +1,7 @@
 import sqlite3
 import pandas as pd
 
-file_path = 'C:/Users/yenma/OneDrive/Documents/Python Projects/meds/Daily Commodities Prices.xlsx' # change to your path
+file_path = '.../Daily Commodities Prices.xlsx' # change to your path
 sheet_name = 'prices'
 
 # Read data from Excel file
